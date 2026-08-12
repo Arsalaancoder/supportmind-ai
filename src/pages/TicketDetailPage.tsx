@@ -239,7 +239,7 @@ export const TicketDetailPage: React.FC<TicketDetailPageProps> = ({ ticketId, on
   const ticket: Ticket = data;
   const customer = data.customers || {};
   const latestAgentRun: AgentRun | null = data.latest_agent_run;
-  const geminiAnalysis = latestAgentRun?.gemini_response || transientAnalysis;
+  const geminiAnalysis = transientAnalysis || latestAgentRun?.gemini_response || null;
   const recalledMemories: HindsightMemory[] = data.memory_events
     ?.filter((e: MemoryEvent) => e.operation === 'recall')
     ?.map((e: MemoryEvent) => e.metadata?.recalled_memories)
