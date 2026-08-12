@@ -1,0 +1,6 @@
+{
+  "name": "SupportMind AI",
+  "description": "AI-Powered Customer Support Platform with Supabase & Hindsight Semantic Memory",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
