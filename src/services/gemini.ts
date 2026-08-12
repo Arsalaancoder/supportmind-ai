@@ -127,7 +127,7 @@ Based on the data above, generate your structured technical troubleshooting reco
   const ai = getGeminiClient();
 
   try {
-    const modelCandidates = ['gemini-flash-latest', 'gemini-pro-latest', 'gemini-2.5-flash'];
+    const modelCandidates = ['gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-1.5-pro'];
     let response: any = null;
     let lastError: any = null;
     const maxAttempts = 2;
