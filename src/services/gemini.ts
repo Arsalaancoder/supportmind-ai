@@ -124,6 +124,8 @@ ${mentalModelSection}
 Based on the data above, generate your structured technical troubleshooting recommendation in JSON format matching the schema.
 `;
 
+  const ai = getGeminiClient();
+
   try {
     const modelCandidates = ['gemini-flash-latest', 'gemini-pro-latest', 'gemini-2.5-flash'];
     let response: any = null;
