@@ -2105,7 +2105,13 @@ async function startServer(initialPort: number = PORT) {
     });
   };
 
-  listenOnPort(currentPort);
+  if (!process.env.VERCEL) {
+    listenOnPort(currentPort);
+  }
 }
 
-startServer();
+if (!process.env.VERCEL) {
+  startServer();
+}
+
+export default app;
